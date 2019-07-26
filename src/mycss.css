@@ -1,0 +1,16 @@
+.whole
+{
+    /* width: 100vh; */
+    height: 100vh;
+
+    /* background-color: black; */
+    /* opacity: 0.3; */
+}
+.containers
+{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    /* border: black; */
+}
