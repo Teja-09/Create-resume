@@ -10,7 +10,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #86BBD8;
+    background-color: white;
     border-radius: 5%;
     box-shadow: 5px 10px 14px #888888;
 }
@@ -48,4 +48,9 @@
     font-size: 25px;
     border-radius: 50%;
     outline: none;
+}
+
+::placeholder
+{
+    color: #000000;
 }

@@ -10,7 +10,7 @@ class Eval extends React.Component
 
         this.state = {
             Name: "",
-            Roll: "",
+            address: "",
             ph: "",
             dob: "",
             Email:"",
@@ -96,7 +96,7 @@ class Eval extends React.Component
                     <div className="formdiv">
                         <input type="text" placeholder="Name" name = "Name" value = {this.state.Name} onChange={(event) => this.handle(event)}/><br></br>
 
-                        <input type="text" placeholder="Address" name = "Roll" value = {this.state.Roll} onChange={(event) => this.handle(event)}/><br></br>
+                        <input type="text" placeholder="Address" name = "address" value = {this.state.address} onChange={(event) => this.handle(event)}/><br></br>
 
                         <input type="text"  placeholder="Phone Number" name = "ph" value = {this.state.ph} onChange={(event) => this.handle(event)}/><br></br>
 
