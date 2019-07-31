@@ -14,7 +14,30 @@ app.post('/',function(req,res){
     var ph = req.body.ph;
     var dob = req.body.dob;
     var email = req.body.Email;
+    var dept = req.body.dept;
     var role = req.body.role;
+
+    var department;
+    if(dept=='CSE' || dept=='cse')
+    {
+        department = "Computer Science";
+    }
+    else if(dept=='ECE' || dept=='ece')
+    {
+        department = "Electronics and Comunication";
+    }
+    else if(dept=='EEE' || dept=='eee')
+    {
+        department = "Electricals and Electronics";
+    }
+    else if(dept=='mech' || dept=='MEE')
+    {
+        department = "Mechanical";
+    }
+    else
+    {
+        department = dept;
+    }
 
 
 res.send(
@@ -28,10 +51,9 @@ res.send(
         "<title>Resume</title>"+
     "</head>"+
     
+    '<body style="height: 100vh;background-color:#646464;">'+
     
-    '<body style="height: 100vh;background-color:rgb(226, 237, 240);">'+
-    
-        '<div class="container" style="background-color: white; margin-top:3%; padding: 2% 8% 2% 8%; margin-bottom:3%;">'+
+        '<div class="container" style="background-color: white; margin-top:3%; padding: 2% 8% 2% 8%; margin-bottom:3%; border-color:#646464; border-style:solid";box-shadow: 5px 10px 14px #000000;>'+
             '<div>'+
             '<h1 style="margin:3% 0 1% 0">'+name+'</h1>'+
             '<h4 style="display:inline-block; margin:10px 5px 10px 0">'+ph+'</h4>'+
@@ -40,16 +62,16 @@ res.send(
             '<hr>'+
             '<div>'+
                 '<h2>Objective:</h2>'+
-                '<p style="font-size: 18px;"><span style="margin-left: 20px">A</span> budding computer science engineer seeking an entry level opportunity in a dynamic organization, preferably for the role of '+role+' which helps in contribution towards towards organization growth with personal growth.  </p>'+
+                '<p style="font-size: 18px;"><span style="margin-left: 20px">A</span> budding '+dept+' engineer seeking an entry level opportunity in a dynamic organization, preferably for the role of '+role+' which helps in contribution towards towards organization growth with personal growth.  </p>'+
             '</div>'+
     
             '<div style="margin-top: 5%">'+
                 '<h2>Education:</h2>'+
                 '<h3 style="margin-left: 15px">Degree</h3>'+
                 '<ul>'+
-                    '<li style="font-size: 18px;">Course: B.Tech, Computer Science and Engineering</li>'+
+                    '<li style="font-size: 18px;">Course: '+department+'</li>'+
                     '<li style="font-size: 18px;">Institution & University: Amrita School of Engineering, Amrita Vishwa Vidyapeetham,Coimbatore</li>'+
-                    '<li style="font-size: 18px;">Major in computer </li>'+
+                    '<li style="font-size: 18px;">Major in '+department+' </li>'+
                     '<li style="font-size: 18px;">CGPA: 9.2/10</li>'+
                 '</ul>'+
             '</div>'+

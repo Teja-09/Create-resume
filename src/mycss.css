@@ -46,11 +46,15 @@
     text-align: center;
     text-decoration: none;
     font-size: 25px;
-    border-radius: 50%;
+    border-radius: 10%;
     outline: none;
 }
 
 ::placeholder
 {
-    color: #000000;
+    color: #999;
+}
+
+input[type=date]:invalid::-webkit-datetime-edit {
+    color: #999;
 }
